@@ -1,0 +1,14 @@
+
+    <h1>View Engine</h1>
+    <h2>halo <%= nama %></h2>
+    <h4>Daftar Karyawan</h4> 
+    <% if (karyawan.length < 1) { %> <!---ngecek terlebih dahulu apakah ada data mahasiswa memakai ejsif-->
+     <p>Data Karyawan masih kosong</p>
+    <% } else { %> <% karyawan.forEach(krw => {%>  <!--karena memanggil object ,maka perlu memakai looping ejs-->
+        <ul>
+            <li>Nama: <%= krw.nama  %></li>
+            <li>email: <%= krw.email  %></li>
+        </ul>
+    <% }) %>
+    <% } %>
+    
